@@ -45,7 +45,7 @@ amanita_uci['source'] = 'UCI Dataset'
 amanita_uci['edibility'] = amanita_uci['edibility'].map({'e': '食用', 'p': '毒性あり'})
 
 # GBIFからAmanita属データを取得
-gbif_data = occ.search(scientificName="Amanita", limit=50, hasCoordinate=True)
+gbif_data = occ.search(scientificName="Amanita", limit=500, hasCoordinate=True)
 gbif_results = pd.DataFrame(gbif_data['results'])
 
 # 必要な情報を抽出
